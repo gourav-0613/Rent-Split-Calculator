@@ -4,7 +4,7 @@ def cal_electricity_bill(unit, charge):
     return float(unit*charge)
 
 # calculate total expenses
-def cal_total_expense(rent,food,electricity,waterbill,grocery,maintenance):
+def cal_total_expense(rent,food,electricity,waterbill,grocery,maintenance,other):
     return float(
     rent
     +food
@@ -12,6 +12,7 @@ def cal_total_expense(rent,food,electricity,waterbill,grocery,maintenance):
     +waterbill
     +grocery
     +maintenance
+    +other
     )
 
 
@@ -32,6 +33,7 @@ def main():
             water_bill = float(input("enter the amount of water bill:-"))
             total_grocery_amount = float(input("enter the amount of Grocery bill:-"))
             maintenance = float(input("Maintenance Amount:-"))
+            other_expenses = float(input("Enter Any other Expenses if any other wise zero"))
 
 
             number_of_people = int(input("How Many Number of People Have to contrie for the Rent:-"))
@@ -51,7 +53,8 @@ def main():
                 total_electric_bill,
                 water_bill,
                 total_grocery_amount,
-                maintenance
+                maintenance,
+                other_expenses
             )
 
             # calculate Per person rent by dividing total expense 
